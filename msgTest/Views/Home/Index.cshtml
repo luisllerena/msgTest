@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display:none" id="divErrorMessage">
+        <label id="errorMessage"></label>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label for="txtEmployeeId">Employee Id</label>
+            <input type="text" class="form-control" id="txtEmployeeId" />
+            <small id="emailHelp" class="form-text text-muted">Enter the employeeId to search one employee or leave blank to retrieve all employees.</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <button class="btn btn-primary" id="btnGetEmployee">Get Employee(s)</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <table id="employeeTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Contract Type</th>
+                    <th>Role</th>
+                    <th>Annual Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" id="loader" style="width: 3rem; height: 3rem; display:none;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/employee.js"></script>
